@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication1.Controllers
 {
-    [Route("weather/")]
+    [Route("weather")]
     [ApiController]
     //[Route("[controller]")]
     
@@ -24,7 +24,7 @@ namespace WebApplication1.Controllers
         [HttpGet("all")]
         public IEnumerable<WeatherForecast> GetAll()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 3).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
