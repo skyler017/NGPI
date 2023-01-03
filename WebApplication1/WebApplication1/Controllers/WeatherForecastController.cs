@@ -4,7 +4,7 @@ namespace WebApplication1.Controllers
 {
     [ApiController]
     //[Route("[controller]")]
-    [Route("/weather")]
+    [Route("weather/")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -32,7 +32,7 @@ namespace WebApplication1.Controllers
         }
 
         
-        [HttpGet("/everything")]
+        [HttpGet("everything")]
         public IEnumerable<WeatherForecast> GetEverything()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
